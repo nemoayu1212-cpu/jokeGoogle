@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Google</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #202124;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 16px 20px;
+            font-size: 13px;
+        }
+        header a {
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            margin-left: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-btn:hover {
+            background-color: rgba(60, 64, 67, 0.08);
+        }
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #1a73e8;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            margin-top: -100px;
+        }
+        .logo {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            user-select: none;
+        }
+        .logo span:nth-child(1) { color: #4285F4; }
+        .logo span:nth-child(2) { color: #EA4335; }
+        .logo span:nth-child(3) { color: #FBBC05; }
+        .logo span:nth-child(4) { color: #4285F4; }
+        .logo span:nth-child(5) { color: #34A853; }
+        .logo span:nth-child(6) { color: #EA4335; }
+
+        .search-form {
+            width: 584px;
+            max-width: 90%;
+            display: flex;
+            align-items: center;
+            padding: 0 18px;
+            height: 46px;
+            border-radius: 24px;
+            border: 1px solid #dfe1e5;
+            background: #ffffff;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .search-form:hover,
+        .search-form:focus-within {
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-color: rgba(223, 225, 229, 0);
+        }
+        .search-icon {
+            display: flex;
+            align-items: center;
+            margin-right: 12px;
+        }
+        .search-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            color: rgba(0, 0, 0, 0.87);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#">Gmail</a>
+        <a href="#">画像</a>
+        <button type="button" class="icon-btn" title="Google アプリ">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M18,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z M18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z" fill="#5f6368"></path>
+            </svg>
+        </button>
+        <div class="avatar">N</div>
+    </header>
+
+    <main class="main-content">
+        <div class="logo">
+            <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+        </div>
+
+        <form id="search-form" class="search-form">
+            <span class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="#9aa0a6" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+            </span>
+            <input type="text" id="search-input" class="search-input" placeholder="Google に質問する" autofocus autocomplete="off">
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
