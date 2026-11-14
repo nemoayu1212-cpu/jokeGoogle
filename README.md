@@ -1,0 +1,2 @@
+# jokeGoogle
+jokeGoogleです。すっごいシンプルなので中は見ても見なくてもいいです
